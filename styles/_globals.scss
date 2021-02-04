@@ -1,0 +1,130 @@
+
+//* Default stylings
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Be Vietnam', sans-serif;
+  font-weight: $reg;
+  line-height: 1.3;
+  scroll-behavior: smooth;
+
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  //? margin-top: 0px;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+button, .button {  
+  padding: 0.8125rem 2rem;
+  background: $bright-red;
+  color: $very-light-gray;
+  font-size: $font-sm;
+  font-weight: $med;
+  border-radius: 1.875rem;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  box-shadow: 0px 7px 14px rgba(242,95,58,0.4);
+  //? transition: ;
+
+  //? &:hover {
+
+  // }  
+}
+
+ul {
+  list-style: none;
+}
+
+
+
+
+//* Flexbox
+
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+
+
+
+//* Helper classes
+
+
+// Visibility
+
+.hide-for-mobile {
+  @include breakpoint-down(large){
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large){
+    display: none;
+  }
+}
+
+
+// Spacing
+
+//? .container {
+//   max-width: ;
+//   margin: 0 auto;
+
+//   &--pall {
+//     padding-top: ;
+//    padding-right: ;
+//    padding-bottom: ;
+//    padding-left: ;
+//   }
+//   &--py {
+//    padding-top: ;
+//    padding-bottom: ;
+//   }
+//   &--px {
+//   padding-right: ;
+//   padding-left: ;
+//   }
+//   &--pt {
+//    padding-top: ;
+//   }
+//   &--pr {
+//    padding-right: ;
+//   }
+//   &--pb {
+//   padding-bottom: ;
+//   }
+//   &--pl {
+//    padding-left: ;
+//   }
+// }

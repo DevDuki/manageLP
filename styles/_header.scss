@@ -1,0 +1,120 @@
+.header {
+  z-index: 1;
+
+  &.open {
+    
+    #burger {
+      
+      span {
+
+        &:first-child {
+          transform-origin: left;
+          transform: rotate(45deg) translateY(-2px);
+        }
+
+        &:nth-child(2){
+          opacity: 0;
+        }
+
+        &:last-child {
+          transform-origin: left;
+          transform: rotate(-45deg) translateY(2px);
+        }
+      }
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: linear-gradient(bottom, $very-dark-blue, transparent 99%);
+    visibility: hidden;
+  }
+
+  nav {
+    padding: 2.5rem 1.5rem;
+
+    @include breakpoint-up(large){
+      padding: 3.125rem 10rem;
+    }
+  }
+
+  &__logo {
+
+    img {
+      margin-top: 0.5rem;
+      display: block;
+      width: 6.875rem;
+      height: 1.125rem;
+
+      @include breakpoint-up(large){
+        margin-top: 0.625rem;
+        width: 7.4375rem;
+        height: 1.25rem;
+      }
+    }
+  }
+
+  &__hamburger {
+
+    span {
+      display: block;
+      background: $dark-blue;
+      width: 25px;
+      height: 4px;
+      transition: all 0.25s ease-in-out;
+
+      &:not(:last-child) {
+        margin-bottom: 0.1875rem;
+      }
+    }
+  }
+
+  &__links {
+
+    a {
+      color: $dark-blue;
+      font-size: 1rem;
+
+      @include breakpoint-up(large){
+        font-size: $font-sm; 
+
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  &__cta {
+
+
+  }
+
+  &__menu {
+    position: absolute;
+    top: 6.375rem;
+    left: 50%;
+    width: calc(100% - 2.5rem);
+    transform: translateX(-50%);
+    background: $very-light-gray;
+    text-align: center;
+    padding: 2.5rem;
+    border-radius: 5px;
+    visibility: hidden;
+    
+    a {
+      display: block;
+      color: $dark-blue;
+      font-size: $font-med;
+      font-weight: $bold;
+
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

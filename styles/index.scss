@@ -1,4 +1,6 @@
-html {
-  background: rebeccapurple;
-  color: green;
-}
+@import './variables';
+@import './mixins';
+@import './globals';
+@import './animations';
+
+@import './header';

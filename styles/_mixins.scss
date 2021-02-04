@@ -1,0 +1,46 @@
+
+//* Breakpoints
+
+//? 320px, 640px, 1024px, 1200px, 1400px (upwards)
+//? xsmall, small, medium, large, xlarge
+$breakpoints-up: ("xsmall": "20em", "small": "40em", "medium": "64em", "large": "75em", "xlarge": "87.5em");
+
+//? 319px, 639px, 1023px, 1199px, 1399px (downwards)
+//? xsmall, small, medium, large, xlarge
+$breakpoints-down: ("xsmall": "19.9375em", "small": "39.9375", "medium": "63.9375em", "large": "74.9375em", "xlarge": "87.4375em");
+
+
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($map: $breakpoints-up, $key: $size)){
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($map: $breakpoints-down, $key: $size)){
+    @content;
+  }
+}
+
+
+
+
+//! Example use case
+/*
+
+//* Hide elements with this class for mobile, starting from medium size and downwards
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+//* Hide elements with this class for desktop, starting from large size upwards
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+*/
