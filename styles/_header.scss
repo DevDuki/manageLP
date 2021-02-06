@@ -35,10 +35,9 @@
   }
 
   nav {
-    padding: 2.5rem 1.5rem;
 
     @include breakpoint-up(large){
-      padding: 3.125rem 10rem;
+      //padding: 3.125rem 10rem;
     }
   }
 
@@ -87,11 +86,6 @@
         }
       }
     }
-  }
-
-  &__cta {
-
-
   }
 
   &__menu {

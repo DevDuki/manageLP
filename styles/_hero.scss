@@ -1,0 +1,89 @@
+.hero {
+  text-align: center;
+  overflow: visible;
+
+  @include breakpoint-up(large) {
+    text-align: left;
+  }
+
+  &__bg-mobile {
+    background-image: url('../images/bg-simplify-section-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    height: 1205px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__bg-desktop {
+    background-image: url('../images/bg-simplify-section-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    height: 1782px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__container {
+    padding-bottom: 5.9375rem;
+
+    @include breakpoint-up(large){
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 4.5rem;
+    }
+  }
+
+  &__image {
+
+    @include breakpoint-up(large){
+      order: 2;
+      flex: 3;
+      text-align: right;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__text {
+
+    @include breakpoint-up(large){
+      order: 1;
+      flex: 2;
+    }
+
+    h1 {
+      color: $dark-blue;
+      font-size: $font-lg;
+
+      @include breakpoint-up(large){
+        font-size: $font-xlg;
+        line-height: 1.1;
+      }
+    }
+
+    p {
+      margin-top: 0.5rem;
+      margin-bottom: 1.875rem;
+      color: $dark-grayish-blue;
+      line-height: 1.75rem;
+
+      @include breakpoint-up(large){
+        margin-top: 1.5rem;
+        margin-bottom: 2.25rem;
+        max-width: 21.25rem;
+      }
+    }
+
+  }
+}

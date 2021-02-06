@@ -24,7 +24,13 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  //? margin-top: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 a, a:visited, a:hover {
@@ -97,34 +103,34 @@ ul {
 
 // Spacing
 
-//? .container {
-//   max-width: ;
-//   margin: 0 auto;
+.container {
+  max-width: 69.375rem;
+  margin: 0 auto;
 
-//   &--pall {
-//     padding-top: ;
-//    padding-right: ;
-//    padding-bottom: ;
-//    padding-left: ;
-//   }
-//   &--py {
-//    padding-top: ;
-//    padding-bottom: ;
-//   }
-//   &--px {
-//   padding-right: ;
-//   padding-left: ;
-//   }
-//   &--pt {
-//    padding-top: ;
-//   }
-//   &--pr {
-//    padding-right: ;
-//   }
-//   &--pb {
-//   padding-bottom: ;
-//   }
-//   &--pl {
-//    padding-left: ;
-//   }
-// }
+  &--pall {
+    padding-top: 2.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1.5rem;
+  }
+  &--py {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  &--px {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  &--pt {
+    padding-top: 2.5rem;
+  }
+  &--pr {
+    padding-right: 1.5rem;
+  }
+  &--pb {
+    padding-bottom: 2.5rem;
+  }
+  &--pl {
+    padding-left: 1.5rem;
+  }
+}
