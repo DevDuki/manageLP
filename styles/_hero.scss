@@ -6,7 +6,7 @@
     text-align: left;
   }
 
-  &__bg-mobile {
+  &__bg {
     background-image: url('../images/bg-simplify-section-mobile.svg');
     background-repeat: no-repeat;
     background-position: top right;
@@ -16,18 +16,12 @@
     top: 0;
     right: 0;
     z-index: -1;
-  }
 
-  &__bg-desktop {
-    background-image: url('../images/bg-simplify-section-desktop.svg');
-    background-repeat: no-repeat;
-    background-position: top right;
-    height: 1782px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
+    @include breakpoint-up(large) {
+      background-image: url('../images/bg-simplify-section-desktop.jpg');
+      background-size: 100vw auto;
+      height: 1782px;
+    }
   }
 
   &__container {
@@ -52,10 +46,25 @@
     img {
       max-width: 100%;
       max-height: 100%;
+
+      @include breakpoint-up(small){
+        max-width: 60rem;
+        max-height: 60rem;
+      }
+
+      @include breakpoint-up(large){
+        max-width: 85%;
+        max-height: 85%;
+      }
     }
   }
 
   &__text {
+
+    @include breakpoint-up(small){
+      max-width: 75%;
+      margin: 0 auto;
+    }
 
     @include breakpoint-up(large){
       order: 1;
