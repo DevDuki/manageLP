@@ -1,0 +1,72 @@
+.testimonials {
+
+  &__container {
+    text-align: center;
+    padding-bottom: 2.5rem;
+  }
+
+  .swiper-container {
+    margin-top: 3.125rem;    
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 20.625rem;
+
+    @include breakpoint-up(large) {
+      margin-bottom: 0;
+    }
+  }
+
+  .swiper-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    position: relative;
+    background: linear-gradient(transparent 2.5rem, $very-light-gray 2.5rem, $very-light-gray 17.5rem, transparent 17.5rem);
+    width: 100%;
+    height: 14.125rem;
+    padding-top: 6.5rem;
+
+    p {
+      padding: 0 1.2rem;
+
+      @include breakpoint-up(large) {
+        padding: 0 2.5rem;
+        padding-top: 1.5rem;
+        font-size: 100%;
+      }
+    }
+
+    img {
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      top: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .swiper-pagination {
+
+    .swiper-pagination-bullet {
+      background: white;
+      border: 1px solid $bright-red;
+      opacity: 1;
+      margin: 0 2px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $bright-red;
+    }
+  }
+
+  &__cta {
+    margin-top: 1rem;
+
+    @include breakpoint-up(large) {
+      margin-top: 0;
+    }
+  }
+}
