@@ -1,0 +1,132 @@
+.footer {
+  background: $very-dark-blue;
+
+  &__container {
+    padding-bottom: 1.5rem;
+    text-align: center;
+
+    @include breakpoint-up(large){
+      display: grid;
+      grid-template-columns: 1fr 2fr 2fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: 
+        "logo   links subscribe"
+        "socials links copyright";
+      justify-items: end;
+      align-items: end;
+      padding-bottom: 3.4rem;
+      padding-top: 3.4rem;
+    }
+  }
+
+  &__subscription {
+
+    @include breakpoint-up(large){
+      grid-area: subscribe;
+      align-self: start;
+    }
+
+    input {
+      width: 15rem;
+      padding: 0.8rem 1.4rem;
+      margin-right: 0.1875rem;
+      border-radius: 1.875rem;
+    }
+
+    button {
+      box-shadow: none;
+    }
+  }
+
+  &__links-container {
+    max-width: 18rem;
+    margin: 0 auto;
+    padding: 2.5rem 1rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    line-height: 2.5;
+
+    @include breakpoint-up(large){
+      padding: 0;
+      width: 100%;
+      grid-area: links;
+      justify-self: start;
+      align-self: start;
+    }
+  }
+
+  &__links {
+
+    a {
+      display: block;
+      color: $very-light-gray;
+      font-size: 0.9rem;
+    }
+
+    &.links-col1 {
+
+    }
+
+    &.links-col2 {
+
+    }
+  }
+
+  &__socials {
+    max-width: 25rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+
+    @include breakpoint-up(large) {
+      grid-area: socials;
+      justify-self: start;
+      margin: 0;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &__social {
+
+    img {
+      width: 2rem;
+      height: 2rem;
+
+      @include breakpoint-up(large){
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-right: 0.625rem;
+      }
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-top: 2.5rem;
+    margin-bottom: 2.2rem;
+
+    @include breakpoint-up(large){
+      margin: 0;
+      grid-area: logo;
+      justify-self: start;
+      align-self: start;
+    }
+
+    #logo-text {
+      fill: $very-light-gray;
+    }
+  }
+
+  &__copyright {
+
+    @include breakpoint-up(large){
+      grid-area: copyright;
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.75rem;
+    }
+  }
+}

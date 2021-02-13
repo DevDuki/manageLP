@@ -1,0 +1,73 @@
+.prefooter {
+  position: relative;
+  background: $bright-red;
+
+  &__container {
+    text-align: center;
+
+    @include breakpoint-up(large) {
+      text-align: left;
+    }
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+
+    img {
+      width: 35rem;
+      height: 35rem;
+      opacity: 0.071;
+      position: absolute;
+    }
+
+    .bg-left {
+      top: 2rem;
+      left: -29.375rem;
+
+      @include breakpoint-up(large) {
+        top: -2.3125rem;
+        left: 11.5rem;
+      }
+    }
+
+    .bg-right {
+      top: -26.3125rem;
+      right: -19rem;
+    }
+  }
+
+  &__content {
+    padding: 5rem 0;
+
+    @include breakpoint-up(large){
+      padding: 3.4rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    h2 {
+      padding-bottom: 1.5rem;
+      color: $very-light-gray;
+      font-size: 2.4375rem;
+      font-weight: $bold;
+      line-height: 1.3;
+
+      @include breakpoint-up(large){
+        width: 45%;
+        line-height: 1.1;
+      }
+    }
+  }
+
+  &__cta {
+    background: $very-light-gray;
+    color: $bright-red;
+  }
+}

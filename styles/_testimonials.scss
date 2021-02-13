@@ -2,7 +2,15 @@
 
   &__container {
     text-align: center;
-    padding-bottom: 2.5rem;
+
+    @include breakpoint-up(medium) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include breakpoint-up(large) {
+      padding-bottom: 11.25rem;
+    }
   }
 
   .swiper-container {
@@ -27,6 +35,10 @@
     width: 100%;
     height: 14.125rem;
     padding-top: 6.5rem;
+
+    @include breakpoint-up(large) {
+      background: linear-gradient(transparent 2.5rem, $very-light-gray 2.5rem, $very-light-gray 19.1rem, transparent 19.1rem);
+    }
 
     p {
       padding: 0 1.2rem;
@@ -64,9 +76,5 @@
 
   &__cta {
     margin-top: 1rem;
-
-    @include breakpoint-up(large) {
-      margin-top: 0;
-    }
   }
 }
