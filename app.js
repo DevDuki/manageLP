@@ -40,8 +40,8 @@ if(screenWidth >= 1023){
 
 const swiper = new Swiper('.swiper-container', {
   pagination: {
+    el: '.swiper-pagination',
   },
-  el: '.swiper-pagination',
   spaceBetween: 30,
   slidesPerView,
   centeredSlides: true,
