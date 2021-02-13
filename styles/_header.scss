@@ -34,13 +34,6 @@
     visibility: hidden;
   }
 
-  nav {
-
-    @include breakpoint-up(large){
-      //padding: 3.125rem 10rem;
-    }
-  }
-
   &__logo {
 
     img {
@@ -77,6 +70,7 @@
     a {
       color: $dark-blue;
       font-size: 1rem;
+      transition: color 0.2s ease-in-out;
 
       @include breakpoint-up(large){
         font-size: $font-sm; 
@@ -84,6 +78,10 @@
         &:not(:last-child) {
           margin-right: 2rem;
         }
+      }
+
+      &:hover {
+        color: $dark-grayish-blue;
       }
     }
   }

@@ -47,3 +47,28 @@ const swiper = new Swiper('.swiper-container', {
   centeredSlides: true,
   loop: true,
 });
+
+
+
+//* Subscription Form
+const form = document.querySelector('form')
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault()
+})
+
+
+const emailInput = document.querySelector('.footer__input')
+const submitBtn = document.querySelector('button[type="submit"]')
+const errorMsg = document.querySelector('.footer__error-msg')
+
+submitBtn.addEventListener('click', () => {
+  const content = emailInput.value
+  if (content === "" || !emailInput.checkValidity()) {
+    errorMsg.style.visibility = "visible"
+    emailInput.classList.add('error')
+  } else {
+    errorMsg.style.visibility = "hidden"
+    emailInput.classList.remove('error')
+  }
+})

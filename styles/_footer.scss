@@ -20,6 +20,7 @@
   }
 
   &__subscription {
+    text-align: left;
 
     @include breakpoint-up(large){
       grid-area: subscribe;
@@ -30,12 +31,27 @@
       width: 15rem;
       padding: 0.8rem 1.4rem;
       margin-right: 0.1875rem;
+      border: 1px solid transparent;
       border-radius: 1.875rem;
+      color: $dark-grayish-blue;
+
+      &.error {
+        border: 1px solid red;
+        color: red;
+      }
     }
 
     button {
       box-shadow: none;
     }
+  }
+
+  &__error-msg {
+    visibility: hidden;
+    color: red;
+    margin-left: 1.5rem;
+    margin-top: 0.3125rem;
+    font-size: 0.6875rem;
   }
 
   &__links-container {
@@ -62,6 +78,10 @@
       display: block;
       color: $very-light-gray;
       font-size: 0.9rem;
+
+      &:hover {
+        color: $bright-red;
+      }
     }
   }
 
@@ -81,14 +101,19 @@
 
   &__social {
 
-    img {
+    svg {
       width: 2rem;
       height: 2rem;
+      fill: $very-light-gray;
 
       @include breakpoint-up(large){
         width: 1.25rem;
         height: 1.25rem;
         margin-right: 0.625rem;
+      }
+
+      &:hover {
+        fill: $bright-red;
       }
     }
   }

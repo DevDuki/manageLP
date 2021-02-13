@@ -102,9 +102,17 @@
       font-size: 1rem;
       font-weight: $bold;
       box-shadow: none;
+      cursor: auto;
 
       @include breakpoint-up(large){
         margin-right: 1.875rem;
+      }
+    }
+
+    .button {
+
+      &::after {
+        visibility: hidden;
       }
     }
 
