@@ -20,7 +20,6 @@
   }
 
   &__subscription {
-    text-align: left;
 
     @include breakpoint-up(large){
       grid-area: subscribe;
@@ -49,7 +48,7 @@
   &__error-msg {
     visibility: hidden;
     color: red;
-    margin-left: 1.5rem;
+    margin-right: 8.9375rem;
     margin-top: 0.3125rem;
     font-size: 0.6875rem;
   }
