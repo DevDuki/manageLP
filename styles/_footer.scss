@@ -111,6 +111,14 @@
         margin-right: 0.625rem;
       }
 
+      path {
+        transform: scale(1.6);
+
+        @include breakpoint-up(large){
+          transform: scale(1);
+        }
+      }
+
       &:hover {
         fill: $bright-red;
       }
