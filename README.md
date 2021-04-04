@@ -1,5 +1,8 @@
 # Frontend Mentor - Manage landing page
 
+## You can view my completed challenge under this link:
+https://condescending-archimedes-2bdae0.netlify.app/
+
 ![Design preview for the Manage landing page coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
